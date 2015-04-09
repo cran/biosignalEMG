@@ -63,7 +63,7 @@ EMG Research: A Report by the AdHoc Committee of the International Society of El
 and Kinesiology.
 }
 \author{
-Antonio Guerrero \email{jaguerrero@correo.uaa.mx}
+J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
 }
 \note{
 An \sQuote{emg} object can only handle a single-channel EMG signal.

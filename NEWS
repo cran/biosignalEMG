@@ -1,0 +1,9 @@
+Changes in 1.0.2 (2015-04-09)
+
+o Minor change in the DESCRIPTION file 
+o Date field updated in the DESCRIPTION file
+
+Changes in 1.0.1 (2015-04-08)
+
+o Minor changes in documentation files 
+o Tidied up the R code using the formatR package

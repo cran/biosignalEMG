@@ -36,7 +36,7 @@ Konrad P. (2005) The ABC of EMG: A Practical Introduction to Kinesiological
 Electromyography. Version 1.0, Noraxon INC. USA 
 }
 \author{
-Jorge Macias \email{jemacias@correo.uaa.mx}
+J.E. Macias-Diaz \email{jemacias@correo.uaa.mx}
 }
 \seealso{
 \code{\link{rectification}}, \code{\link[stats]{filter}}

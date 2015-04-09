@@ -6,22 +6,22 @@
 Standard processing tools for electromyogram (EMG) signals
 }
 \description{
-Data processing tools to compute the rectified, integrated and the averaged EMG. A routine to compute and plot the ensembled average EMG. An EMG signal simulator for general purposes.
+Data processing tools to compute the rectified, integrated and the averaged EMG. A routine to compute and plot the ensemble average of the EMG. An EMG signal simulator for general purposes.
 }
 \details{
 \tabular{ll}{
 Package: \tab biosignalEMG\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2015-03-07\cr
+Version: \tab 1.0.2\cr
+Date: \tab 2015-04-09\cr
 License: \tab GPL (>= 2)\cr
 }
 Standard processing tools (rectification, integration, average, ensemble-average) of raw data of an EMG signal.
 }
 \author{
-Jose Antonio Guerrero Diaz de Leon, Jorge Eduardo Macias Diaz
+J.A. Guerrero, J.E. Macias-Diaz
 
-Maintainer: Antonio Guerrero <jaguerrero@correo.uaa.mx>
+Maintainer: J.A. Guerrero <jaguerrero@correo.uaa.mx>
 
 }
 \references{

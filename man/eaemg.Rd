@@ -70,7 +70,7 @@ Kumar S., Mital A. (1996) \emph{Electromyography In Ergonomics}
 Esquivel M.E., Guerrero J.A., Macias-Diaz J.E. (2010) Activity pattern detection in electroneurographic and electromyogram signals through a heteroscedastic change-point method. \emph{Mathematical Biosciences} \bold{224(2)} 109--117
 }
 \author{
-Antonio Guerrero \email{jaguerrero@correo.uaa.mx}
+J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
 }
 
 \seealso{
@@ -85,7 +85,7 @@ emgx <- synthetic.emg(n.length.out=10000, on.sd=1, on.duration.mean=350,
    on.duration.sd=10, off.sd=0.05, off.duration.mean=300, off.duration.sd=20,
    on.mode.pos=0.75, shape.factor=0.5, samplingrate=1000, units="mV",
    data.name="Synthetic EMG")
-# RMS-envelope
+# MA-envelope
 emgma <- envelope(emgx, method="MA", wsize=60)
 # Ensemble-averaged EMG
 ea1 <- eaemg(emgma, rle(emgx$on.off), what=1, timenormalization="min", scalem=1,

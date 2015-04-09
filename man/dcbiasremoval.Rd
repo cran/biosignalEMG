@@ -15,7 +15,7 @@ dcbiasremoval(data, baseline, data.name)
 an \sQuote{emg} object.
 }
   \item{baseline}{
-constant to be added to the EMG signal. If not provided, this values is set so the resulting EMG has and overall mean of 0.
+constant to be substracted to the EMG signal. If not provided, this values is set so the resulting EMG has and overall mean of 0.
 }
   \item{data.name}{
 a string specifying the name of the variable which appears on the plots. If empty or not provided is taken from the object given as data.
@@ -27,7 +27,7 @@ An \sQuote{emg} object.
 }
 
 \author{
-Jorge Macias \email{jemacias@correo.uaa.mx}
+J.E. Macias-Diaz \email{jemacias@correo.uaa.mx}
 }
 
 \seealso{
@@ -39,7 +39,7 @@ See also \code{\link{emg}}
 op <- par(mfrow=c(2,1))
 
 ## Creates a random vector to simulate a baseline noise with a DC-offset
-x <- rnorm(1000,-1,1)
+x <- rnorm(1000,1,1)
 emg1 <- emg(x,samplingrate = 1000, units = "mV", data.name = "")
 plot(emg1,main="Simulated EMG with a DC-offset")
 abline(h=mean(emg1$values),col="red",lwd=2)  # Show the position of the overall mean
