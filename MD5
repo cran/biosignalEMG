@@ -1,6 +1,6 @@
-f991ccecefa4ff9335ae4b7e528ef563 *DESCRIPTION
-e5f95ebdd626c7f3a297183c3c5653b1 *NAMESPACE
-fe23353e0afe5657a208957c9c5410fe *NEWS
+5dfcc4985466ee2d1421883d43903aea *DESCRIPTION
+9af5c8feb51547b57391c6163c27f252 *NAMESPACE
+aa2d120bc8af2abadff76b5df5336366 *NEWS
 8e06a49c7dd1b4d1b0292f235105ebec *R/dcbiasremoval.R
 33d2f2013c37f56181620bec20d8f4bb *R/eaemg.R
 49e9f0443c428317a27d2963092069b6 *R/emg.R
@@ -22,7 +22,7 @@ cd2232ba27b3677d517d99b9d4809615 *R/summary.eaemg.R
 b4420cbb0ca98f124955561ae56bb096 *R/summary.emg.R
 c258d2f012524cf4563c613e9b09296b *R/summary.iemg.R
 98a5d3d9db0cfd82f3275edb973a5543 *R/synthetic.emg.R
-e4d9cbd8b840270902e41c19722d1712 *man/biosignalEMG-package.Rd
+e1e189cb8fe7316877e823240767aef2 *man/biosignalEMG-package.Rd
 8f847fb9573be780b19d2d8f49a6b94a *man/dcbiasremoval.Rd
 0c9bd0870d3dabf19a4c2831e3629741 *man/eaemg.Rd
 abaf86573dd5743a37a0df27ad061b8c *man/emg.Rd

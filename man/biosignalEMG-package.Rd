@@ -12,8 +12,8 @@ Data processing tools to compute the rectified, integrated and the averaged EMG.
 \tabular{ll}{
 Package: \tab biosignalEMG\cr
 Type: \tab Package\cr
-Version: \tab 1.0.2\cr
-Date: \tab 2015-04-09\cr
+Version: \tab 1.0.3\cr
+Date: \tab 2015-07-04\cr
 License: \tab GPL (>= 2)\cr
 }
 Standard processing tools (rectification, integration, average, ensemble-average) of raw data of an EMG signal.
