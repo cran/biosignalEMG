@@ -1,12 +1,18 @@
-integration <- function(data, reset = FALSE, reset.criteria = c("samples", "time", 
-    "value"), vreset, units, data.name) {
+integration <- function(data, channel, reset = FALSE, reset.criteria = c("samples", 
+    "time", "value"), vreset, units, data.name) {
     call <- match.call()
     if (missing(data)) 
         stop("'data' argument is not specified")
-    if (!inherits(data, "emg")) 
+    if (!is.emg(data)) 
         stop("an object of class 'emg' is required")
-    if (missing(data.name)) 
-        data.name <- data$data.name
+    if (missing(channel)) {
+        if (missing(data.name)) 
+            data <- extractchannel(data) else data <- extractchannel(data, data.name = data.name)
+    } else {
+        if (missing(data.name)) 
+            data <- extractchannel(data, channel) else data <- extractchannel(data, channel, data.name)
+    }
+    
     if (any(data$value < 0)) 
         stop("data must be positive (rectified)")
     reset.criteria <- match.arg(reset.criteria)
@@ -54,7 +60,6 @@ integration <- function(data, reset = FALSE, reset.criteria = c("samples", "time
         ivalues <- head(as.vector(apply(values, 2, cumsum)), n)
         resetpoints <- seq(vreset, n, vreset)
     }
-    object <- iemg(ivalues, match.call(), resetpoints, data$samplingrate, units, 
-        data.name = data.name)
+    object <- iemg(ivalues, call, resetpoints, data$samplingrate, units, data$data.name)
     return(object)
 } 

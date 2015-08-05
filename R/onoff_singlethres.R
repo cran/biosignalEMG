@@ -1,5 +1,4 @@
-rectification <- function(data, channel, rtype = c("fullwave", "halfwave"), data.name, 
-    ...) {
+onoff_singlethres <- function(data, channel, t = 0.05, data.name) {
     if (missing(data)) 
         stop("'data' argument is not specified")
     if (!is.emg(data)) 
@@ -11,12 +10,11 @@ rectification <- function(data, channel, rtype = c("fullwave", "halfwave"), data
         if (missing(data.name)) 
             data <- extractchannel(data, channel) else data <- extractchannel(data, channel, data.name)
     }
-    rtype <- match.arg(rtype)
+    if (!is.numeric(t)) 
+        stop("The threshold 't' must be a numeric value.")
     
-    tdata <- data$values
-    rectdata <- abs(tdata)
-    if (rtype == "halfwave") 
-        rectdata[tdata < 0] <- 0
-    object <- emg(rectdata, data$samplingrate, data$units, data$data.name)
-    return(object)
+    emgma <- envelope(data, method = "MA", wsize = 60)
+    detected <- as.numeric(emgma$values > t)
+    detected[is.na(detected)] <- 0
+    return(detected)
 } 

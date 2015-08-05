@@ -1,16 +1,23 @@
-eaemg <- function(data, runs, what, timenormalization = c("min", "mean", "median", 
-    "max"), scalem = 1, empirical = TRUE, level = 0.9) {
-    call <- match.call()
+eaemg <- function(data, channel, runs, what, timenormalization = c("min", "mean", 
+    "median", "max"), scalem = 1, empirical = TRUE, level = 0.9) {
     if (missing(data)) 
         stop("'data' argument is not specified")
-    if (!inherits(data, "emg")) 
+    if (!is.emg(data)) 
         stop("an object of class 'emg' is required")
+    if (missing(channel)) {
+        data <- extractchannel(data)
+    } else {
+        data <- extractchannel(data, channel)
+    }
     if (missing(runs)) 
         stop("'runs' argument is not specified")
     if (missing(what)) 
         stop("'what' argument is not specified")
-    if (!inherits(runs, "rle")) 
-        stop("'runs' should be an object of class 'rle'")
+    if (!inherits(runs, "rle")) {
+        if (!is.vector(runs)) 
+            stop("'runs' must be a vector of an atomic type or an object of class 'rle'")
+        runs <- rle(runs)
+    }
     if (is.null(runs$lengths) || is.null(runs$values) || length(runs$lengths) != 
         length(runs$values)) 
         stop("invalid 'runs' structure")

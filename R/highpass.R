@@ -1,5 +1,4 @@
-rectification <- function(data, channel, rtype = c("fullwave", "halfwave"), data.name, 
-    ...) {
+highpass <- function(data, channel, cutoff = 50, data.name) {
     if (missing(data)) 
         stop("'data' argument is not specified")
     if (!is.emg(data)) 
@@ -11,12 +10,12 @@ rectification <- function(data, channel, rtype = c("fullwave", "halfwave"), data
         if (missing(data.name)) 
             data <- extractchannel(data, channel) else data <- extractchannel(data, channel, data.name)
     }
-    rtype <- match.arg(rtype)
     
-    tdata <- data$values
-    rectdata <- abs(tdata)
-    if (rtype == "halfwave") 
-        rectdata[tdata < 0] <- 0
-    object <- emg(rectdata, data$samplingrate, data$units, data$data.name)
+    if (data$samplingrate == 0) 
+        stop("The sampling rate is requiered")
+    bf <- butter(5, 2 * cutoff/data$samplingrate, type = "high")
+    b <- signal::filter(bf, data$values)
+    attributes(b) <- NULL
+    object <- emg(b, data$samplingrate, data$units, data$data.name)
     return(object)
 } 

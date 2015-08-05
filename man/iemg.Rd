@@ -9,7 +9,7 @@
 Integrated EMG
 }
 \description{
-Creates an \sQuote{iemg} object to store an integrated EMG signal.}
+Creates an \sQuote{iemg} object to store an integrated \acronym{EMG} signal.}
 \usage{
 iemg(data, calliemg, resetpoints, samplingrate = 0, units = "", data.name = "")
 
@@ -24,20 +24,19 @@ iemg(data, calliemg, resetpoints, samplingrate = 0, units = "", data.name = "")
 an object of class \sQuote{emg}.
 }
   \item{calliemg}{
-a matched \code{\link{integration}} function call
+a matched \code{\link{integration}} function call.
 }
   \item{resetpoints}{
-the index of the samples in which a reset point occur 
+the index of the samples in which a reset point occur.
 }
   \item{samplingrate}{
-number of samples carried per second, measured in Hz. A value of 0 indicates that this value is missing or unknown.
+number of samples carried per second, measured in Hertz. A value of 0 indicates that this value is missing or unknown.
 }
   \item{units}{
-a character vector specifying the units (usually \sQuote{mV.s}) of the integrated EMG data.
+a character vector specifying the units (usually "mV.s") of the integrated \acronym{EMG} data.
 }
-  \item{data.name}{
-a string specifying the name of the variable which appears on the plots. If empty or not
-provided is taken from the object given as data.
+ \item{data.name}{
+a string specifying the name of the variable which will appears on the plots. If empty or not provided is taken from the object given as \code{data}.
 }
   \item{object}{
 an object of class \sQuote{iemg}.
@@ -78,7 +77,7 @@ EMG Research: A Report by the AdHoc Committee of the International Society of El
 and Kinesiology.
 }
 \author{
-J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
+J.E. Macias-Diaz, J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
 }
 \note{
 \sQuote{iemg} is not intended to be called directly, but indirectly from the \sQuote{integration} function.
@@ -89,17 +88,18 @@ See also \code{\link{integration}}
 }
 \examples{
 # Simulate 5 seconds of an EMG
-emgx <- synthetic.emg(n.length.out=5000, on.sd=1, on.duration.mean=350, on.duration.sd=10,
-   off.sd=0.05, off.duration.mean=300, off.duration.sd=20, on.mode.pos=0.75,
-   shape.factor=0.5, samplingrate=1000, units="mV", data.name="Synthetic EMG")
+emgx <- syntheticemg(n.length.out = 5000, on.sd = 1, on.duration.mean = 350, 
+    on.duration.sd = 10, off.sd = 0.05, off.duration.mean = 300, off.duration.sd = 20, 
+    on.mode.pos = 0.75, shape.factor = 0.5, samplingrate = 1000, units = "mV", 
+    data.name = "Synthetic EMG")
 
 # Full-wave rectified EMG
-emgr <- rectification(emgx, rtype="fullwave")
+emgr <- rectification(emgx, rtype = "fullwave")
 
 # Integration of the full-wave rectified EMG without reset points
-emgi1 <- integration(emgr, reset=FALSE)
+emgi1 <- integration(emgr, reset = FALSE)
 print(emgi1)
-plot(emgi1, main="Integrated EMG")
+plot(emgi1, main = "Integrated EMG")
 summary(emgi1)
 }
 

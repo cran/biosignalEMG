@@ -1,11 +1,15 @@
-movingaverage <- function(data, wsize, units = c("samples", "time"), data.name) {
-    call <- match.call()
+movingaverage <- function(data, channel, wsize, units = c("samples", "time"), data.name) {
     if (missing(data)) 
         stop("'data' argument is not specified")
-    if (!inherits(data, "emg")) 
+    if (!is.emg(data)) 
         stop("an object of class 'emg' is required")
-    if (missing(data.name)) 
-        data.name <- data$data.name
+    if (missing(channel)) {
+        if (missing(data.name)) 
+            data <- extractchannel(data) else data <- extractchannel(data, data.name = data.name)
+    } else {
+        if (missing(data.name)) 
+            data <- extractchannel(data, channel) else data <- extractchannel(data, channel, data.name)
+    }
     units <- match.arg(units)
     if (missing(wsize)) 
         stop("Window size argument is not specified")
@@ -23,6 +27,6 @@ movingaverage <- function(data, wsize, units = c("samples", "time"), data.name) 
     fvalues <- stats::filter(data$values, filtercoeffs, sides = 2)
     # fvalues[is.na(fvalues)]<-data$values[is.na(fvalues)]
     object <- emg(fvalues[1:length(data$values)], data$samplingrate, data$units, 
-        data.name = data.name)
+        data$data.name)
     return(object)
 } 

@@ -1,7 +1,6 @@
-synthetic.emg <- function(n.length.out = 10000, on.sd = 1, on.duration.mean = 350, 
+syntheticemg <- function(n.length.out = 10000, on.sd = 1, on.duration.mean = 350, 
     on.duration.sd = 10, off.sd = 0.05, off.duration.mean = 300, off.duration.sd = 20, 
     on.mode.pos = 0.75, shape.factor = 0.5, samplingrate = 0, units = "", data.name = "Synthetic EMG") {
-    call <- match.call()
     n.length.out <- round(n.length.out)
     if (n.length.out <= 0) 
         stop("length must be non-negative number")

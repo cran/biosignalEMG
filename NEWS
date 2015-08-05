@@ -1,15 +1,26 @@
-Changes in 1.0.3 (2015-07-04)
+Changes in 2.0.0 (2015-08-05)
+   o Pre-processing routines (highpass, whitening) were added.
+   o A routine to read files in format ABFv1.0 was added.
+   o Routines were created to convert data frames, matrices and vectors to EMG data format.
+   o The EMG class now supports multichannel data.
+   o All the routines were changed so they could work with multichannel data.
+   o Actual data were added (both tabular and in ABF format).
+   o Routines were added to automatic on/off detection in EMG signals.
+   o Routines were added to compute measures of quality of automatic detection of activity phases.
+   o Unnecessary calls to 'match.call' where deleted.
+   o Pre-processing routines were separated of the basic processing routines.
+   o Fixed some minor bugs.
+   o Corrected typos in .Rd files.
 
-o Undefined globals corresponding to functions in
+Changes in 1.0.3 (2015-07-04)
+    o Undefined globals corresponding to functions in
 the default packages now are imported into the package
 namespace
 
 Changes in 1.0.2 (2015-04-09)
-
-o Minor change in the DESCRIPTION file 
-o Date field updated in the DESCRIPTION file
+    o Minor change in the DESCRIPTION file 
+    o Date field updated in the DESCRIPTION file
 
 Changes in 1.0.1 (2015-04-08)
-
-o Minor changes in documentation files 
-o Tidied up the R code using the formatR package
+    o Minor changes in documentation files 
+    o Tidied up the R code using the formatR package
