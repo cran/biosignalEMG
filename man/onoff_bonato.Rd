@@ -48,7 +48,7 @@ intervals from surface myoelectric signal during gait. \emph{IEEE Transactions o
 287--299. ISSN 0018--9294.
 }
 \author{
-J.E. Macias-Diaz, J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
+J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
 }
 \note{
 The default values of \code{m} and \code{minL} where choosen for a sampling rate of 500Hz.

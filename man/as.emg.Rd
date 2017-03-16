@@ -39,7 +39,7 @@ additional arguments to be passed to methods (such as the samplingrate or the un
 }
 
 \author{
-J.E. Macias-Diaz, J.A. Guerrero \email{jaguerrero@correo.uaa.mx} 
+J.A. Guerrero \email{jaguerrero@correo.uaa.mx} 
 }
 
 \seealso{

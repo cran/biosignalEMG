@@ -10,6 +10,7 @@ Internal biosignalEMG functions.
 .validchannel(data, channel)
 }
 \author{
-J.A. Guerrero, J.E. Macias-Diaz
+J.A. Guerrero \email{jaguerrero@correo.uaa.mx} 
+
 }
 \keyword{internal}

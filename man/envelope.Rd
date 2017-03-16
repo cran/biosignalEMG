@@ -44,7 +44,7 @@ Konrad P. (2005) The ABC of EMG: A Practical Introduction to Kinesiological
 Electromyography. Version 1.0, Noraxon INC. USA. 
 }
 \author{
-J.E. Macias-Diaz, J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
+J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
 }
 \note{
 A direct option to compute the linear envelope (LE-envelope) is not provided, but it can be indirectly computed as shown in the examples.

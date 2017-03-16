@@ -37,7 +37,7 @@ Merletti R. (1999) Standards for Reporting EMG data. \emph{Journal of Electromyo
 Freriks B., Stegeman D.F. and Hermens H.J. (1999) European Recommendations Standards for Surface Electromyography for Surface Electromyography, results of the SENIAM project. ISBN: 90-75452-14-4.
 }
 \author{
-J.E. Macias-Diaz, J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
+J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
 }
 \note{
 This procedure only uses a butterworth type filter. In order to apply a different type of filter, please see the documentation of the \sQuote{signal} package.

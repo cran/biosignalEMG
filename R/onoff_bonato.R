@@ -24,7 +24,7 @@ onoff_bonato <- function(data, channel, sigma_n, Pfa = 0.05, m = 5, r0 = 1, minL
     }
     zeta <- (-2 * sigma_n^2 * log(Pzeta))
     
-    z <- tail(data$values, 1)^2 + head(data$values, -1)^2
+    z <- tail(data$values, -1)^2 + head(data$values, -1)^2
     cs <- cumsum(z > zeta)
     pcs <- tail(cs, -(m - 1)) - c(0, head(cs, -m))
     detected <- c(pcs >= r0, rep(0, m))

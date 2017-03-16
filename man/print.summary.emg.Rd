@@ -21,7 +21,7 @@ additional arguments to be passed to the generic function.
 Some values printed on screen.
 }
 \author{
-J.E. Macias-Diaz, J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
+J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
 }
 \seealso{
 \code{\link{emg}}

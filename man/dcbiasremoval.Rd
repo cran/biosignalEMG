@@ -30,7 +30,7 @@ An \sQuote{emg} object.
 }
 
 \author{
-J.E. Macias-Diaz, J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
+J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
 }
 
 \seealso{

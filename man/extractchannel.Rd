@@ -28,7 +28,7 @@ if \code{channel} is a single channel \sQuote{emg} object, that single channel i
 an \sQuote{emg} object containing a single channel.
 }
 \author{
-J.E. Macias-Diaz, J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
+J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
 }
 
 \seealso{

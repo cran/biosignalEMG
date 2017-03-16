@@ -47,7 +47,7 @@ EMG Research: A Report by the AdHoc Committee of the International Society of El
 and Kinesiology.
 }
 \author{
-J.E. Macias-Diaz, J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
+J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
 }
 
 \seealso{

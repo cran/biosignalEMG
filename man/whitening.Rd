@@ -43,7 +43,7 @@ An \sQuote{emg} object storing the whitened \acronym{EMG}.
 Implementing PCA/Whitening \url{http://ufldl.stanford.edu/wiki/index.php/Implementing_PCA/Whitening}
 }
 \author{
-J.E. Macias-Diaz, J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
+J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
 }
 \note{
 The output is not fully whitened. The method decorrelates the columns of the artificial matrix, which contains a shifted version of the signal. At the end only one column (which can be autocorrelated) is taken as the output.

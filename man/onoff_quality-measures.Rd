@@ -53,7 +53,7 @@ Guerrero J.A., Macias-Diaz J.E. (2014) A computational method for the detection 
 Pistohl T., Schmidt T.S.B., Ball T., Schulze-Bonhage A., Aertsen A., Mehring C. (2013) Grasp detection from human ECoG during natural reach-to-grasp movements. \emph{PLoS ONE} \bold{8}
 }
 \author{
-J.E. Macias-Diaz, J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
+J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
 }
 \note{
 The parameter \code{t} should be adjusted in terms of the sampling rate of the \acronym{EMG}.

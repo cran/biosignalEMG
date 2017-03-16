@@ -1,4 +1,4 @@
-onoff_singlethres <- function(data, channel, t = 0.05, data.name) {
+onoff_singlethres <- function(data, channel, eemg, t = 0.05, data.name) {
     if (missing(data)) 
         stop("'data' argument is not specified")
     if (!is.emg(data)) 
@@ -12,9 +12,13 @@ onoff_singlethres <- function(data, channel, t = 0.05, data.name) {
     }
     if (!is.numeric(t)) 
         stop("The threshold 't' must be a numeric value.")
-    
-    emgma <- envelope(data, method = "MA", wsize = 60)
-    detected <- as.numeric(emgma$values > t)
+    if (missing(eemg)) {
+        eemg <- envelope(data, method = "MA", wsize = 60)
+    } else {
+        if (!is.emg(eemg))
+            eemg <- envelope(data, method = "MA", wsize = 60)
+    }
+    detected <- as.numeric(eemg$values > t)
     detected[is.na(detected)] <- 0
     return(detected)
 } 

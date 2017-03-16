@@ -7,7 +7,7 @@ Automatic on/off detection algorithm based on a simple threshold rule
 Automatic detection algorithm to determine the times at which muscles \dQuote{turn on} (activity periods) and \dQuote{turn off} (silence periods) in an EMG signal.
 }
 \usage{
-onoff_singlethres(data, channel, t = 0.05, data.name)
+onoff_singlethres(data, channel, eemg, t = 0.05, data.name)
 }
 \arguments{
   \item{data}{
@@ -15,6 +15,9 @@ an \sQuote{emg} object.
 }
   \item{channel}{
 in case of multi-channel data, \code{channel} is the specific channel to be considered by the procedure.  Possible values: a character vector specifying the name of the channel to be considered (case sensitive) or a numeric value specifying the channel to be considered (number of column in \code{data}).
+}
+  \item{eemg}{
+an \sQuote{emg} object containing an envelope.
 }
   \item{t}{
 a threshold value to determine if a datum reresent activity (above the threshold) or silence (below the threshold) in a signal.
@@ -24,7 +27,7 @@ a string specifying the name of the variable which will appears on the plots. If
 }
 }
 \details{
-In this procedure, on and off time estimation is determined by the times at which the envelope of the  signal (determined using \code{envelope}) exceeds a threshold. 
+In this procedure, on and off time estimation is determined by the times at which the envelope of the  signal (\code{eemg} or determined using \code{envelope}) exceeds a threshold. 
 }
 \value{
 A numeric vector with values 0 (silence) and 1 (activity).
@@ -33,7 +36,7 @@ A numeric vector with values 0 (silence) and 1 (activity).
 Rose W. (2014) Electromyogram Analysis. \emph{Mathematics and Signal Processing for Biomechanics}. \url{http://www.udel.edu/biology/rosewc/kaap686/}
 }
 \author{
-J.E. Macias-Diaz, J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
+J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
 }
 
 \seealso{

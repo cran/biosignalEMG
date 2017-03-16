@@ -77,7 +77,7 @@ EMG Research: A Report by the AdHoc Committee of the International Society of El
 and Kinesiology.
 }
 \author{
-J.E. Macias-Diaz, J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
+J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
 }
 \note{
 \sQuote{iemg} is not intended to be called directly, but indirectly from the \sQuote{integration} function.

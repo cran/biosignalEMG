@@ -1,3 +1,8 @@
+Changes in 2.0.1 (2017-03-14)
+   o A bug was fixed in the routine onoff_bonato.
+   o The envelope now can be passed as a parameter in the routine onoff_singlethres.
+   o Minor changes in documentation files 
+
 Changes in 2.0.0 (2015-08-05)
    o Pre-processing routines (highpass, whitening) were added.
    o A routine to read files in format ABFv1.0 was added.

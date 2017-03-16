@@ -28,7 +28,7 @@ Axon(TM) Binary File Format (ABF): User Guide. \url{http://mdc.custhelp.com/euf/
 Half-precision floating-point format (2015, June 26). In Wikipedia, The Free Encyclopedia. Retrieved July 9, 2015, \url{https://en.wikipedia.org/w/index.php?title=Half-precision_floating-point_format&oldid=668770694}
 }
 \author{
-J.E. Macias-Diaz, J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
+J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
 }
 \note{
 To load an Axon ABFv2.x file, please use the \R package \pkg{abf2}. 
