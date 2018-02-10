@@ -1,6 +1,6 @@
-aba3b54eba3f65697fee61ac536244f7 *DESCRIPTION
+561ce2c2b89ef2d396ce54381bb41383 *DESCRIPTION
 018adbb1f255a561ee9deb4c3182f987 *NAMESPACE
-a519613a98953600e802dbc229e65f4b *NEWS
+95d25aca8ff311318f1ea42fe991d74a *NEWS
 4e7e871def48e9f283e3e2b0fa39bd68 *R/ANDP.R
 3f537667eaa7ec76c645cac04caeb00c *R/MNChPD.R
 6366941a56781ba8d97a0aa2217033b6 *R/PCE.R
@@ -25,6 +25,7 @@ ca3075be36dc11c160a8504a47202bb1 *R/loadABF1.R
 c05d611eff5537ef1affeea0331a58df *R/movingaverage.R
 63fed41fe4cac558681f9ee6ef579532 *R/onoff_bonato.R
 ae591963d6570c8cf38fd9bd7200e15b *R/onoff_singlethres.R
+1dab094bdf661f0ae556a39bde282905 *R/phasestats.R
 e14d16f0c991c72f1f2c06f661edf8af *R/plot.eaemg.R
 466a1f95a5726d1108acb72e2cdfc227 *R/plot.emg.R
 0f8cecb2fa16a0c8ff0b17b644d64cf0 *R/plot.iemg.R
@@ -45,7 +46,7 @@ f1a70a536810e72e72a774b6aed05117 *data/emg95306000.rda
 ca6c592d75bb55dc8bb0bf8103baa4a3 *inst/extdata/96627009.DAT
 f740d0da42fa07a35e0933e38ed1d315 *man/as.emg.Rd
 899e2d06bb0362ae83d0d4234de0d451 *man/biosignalEMG-internal.Rd
-f8689ad8de4db2505cc5bc9d1b7576ee *man/biosignalEMG-package.Rd
+476e47d7e52519b6694c6354230e5d5f *man/biosignalEMG-package.Rd
 96ccf2f6df914936eda699ac8d9aa67c *man/dcbiasremoval.Rd
 0ed0a4720e7bb582ebfd97c9774526a8 *man/eaemg.Rd
 4632cc039b7419db2d537265a7000345 *man/emg.Rd
@@ -61,6 +62,7 @@ e0330db779c64e406bd5176c9c919676 *man/movingaverage.Rd
 e9e3a2534b72fa360b5dc8b97ffa6912 *man/onoff_bonato.Rd
 d1a41a876cef8e1f3dc5f011bef5f59b *man/onoff_quality-measures.Rd
 bda8f38f45f07545f0958461cc0bf14d *man/onoff_singlethres.Rd
+e7bdc7c2609a12efefe8b893eef8a9c3 *man/phasestats.Rd
 eb3593cfd4434db3475ea87042288f5d *man/print.summary.eaemg.Rd
 0cebb9831283ea4dc5c1c8ef8971b923 *man/print.summary.emg.Rd
 0398a7a9b49cc7d4b978e1cb15b8c6bb *man/rectification.Rd

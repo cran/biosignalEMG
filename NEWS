@@ -1,3 +1,6 @@
+Changes in 2.0.2 (2018-02-09)
+   o A new routine was added (phasestats).
+
 Changes in 2.0.1 (2017-03-14)
    o A bug was fixed in the routine onoff_bonato.
    o The envelope now can be passed as a parameter in the routine onoff_singlethres.
