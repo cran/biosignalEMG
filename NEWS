@@ -1,3 +1,9 @@
+Changes in 2.1.0 (2018-02-18)
+   o New type has been added to the routine "envelope" to compute the LE-envelopé.
+   o Routine "highpass" now have a parameter to control the order of the filter.
+   o A new routine was added (lowpass).
+   o Changes on code of the routine movingaverage.
+
 Changes in 2.0.2 (2018-02-09)
    o A new routine was added (phasestats).
 

@@ -15,10 +15,10 @@ onoff_singlethres <- function(data, channel, eemg, t = 0.05, data.name) {
     if (missing(eemg)) {
         eemg <- envelope(data, method = "MA", wsize = 60)
     } else {
-        if (!is.emg(eemg))
+        if (!is.emg(eemg)) 
             eemg <- envelope(data, method = "MA", wsize = 60)
     }
     detected <- as.numeric(eemg$values > t)
     detected[is.na(detected)] <- 0
     return(detected)
-} 
+}

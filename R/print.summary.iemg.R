@@ -17,4 +17,4 @@ print.summary.iemg <- function(x, ...) {
         cat("\n\tSamplingrate (Hertz): ", format(object$samplingrate))
     }
     cat("\n")
-} 
+}

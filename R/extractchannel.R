@@ -26,4 +26,4 @@ extractchannel <- function(data, channel, data.name) {
     }
     object <- emg(values, data$samplingrate, units, data.name = data.name)
     return(object)
-} 
+}

@@ -11,4 +11,4 @@ ANDP <- function(b, bE) {
     NfE <- sum((abs(bE[2:n] - bE[1:(n - 1)]) != 0)) + 1
     s <- abs(Nf - NfE)
     return(s)
-} 
+}

@@ -33,4 +33,4 @@ print.summary.emg <- function(x, ...) {
             }
         }
     }
-} 
+}

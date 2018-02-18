@@ -9,4 +9,4 @@ PCE <- function(b, bE) {
     n <- length(b)
     s <- 100 * sum(b != bE)/n
     return(s)
-} 
+}

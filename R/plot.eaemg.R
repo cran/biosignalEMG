@@ -20,4 +20,4 @@ plot.eaemg <- function(x, ci.lty = "dashed", ...) {
     Percent.cycle <- matrix(tail(seq(0, 100, by = 100/n), n), nrow = n, ncol = 3)
     do.call("matplot", c(list(x = Percent.cycle, y = object$intervals, type = "l", 
         col = "black", lty = c(ci.lty, lty, ci.lty)), args))
-} 
+}

@@ -39,4 +39,4 @@
         m <- "Choose a single channel"
     }
     return(list(val = valid, message = m, channel = ch))
-} 
+}

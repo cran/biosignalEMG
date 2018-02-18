@@ -12,4 +12,4 @@ print.emg <- function(x, ...) {
     }
     cat("\nValues:\n")
     print(object$values)
-} 
+}

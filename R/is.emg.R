@@ -1,1 +1,1 @@
-is.emg <- function(x) inherits(x, "emg") 
+is.emg <- function(x) inherits(x, "emg")

@@ -30,4 +30,4 @@ whitening <- function(data, channel, method = c("PCA", "ZCA"), k = 4, r = 1, dat
     
     object <- emg(R[, r], data$samplingrate, data$units, data$data.name)
     return(object)
-} 
+}

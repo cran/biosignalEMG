@@ -1,4 +1,4 @@
-highpass <- function(data, channel, cutoff = 50, n = 5, data.name) {
+lowpass <- function(data, channel, cutoff = 50, n = 5, data.name) {
     if (missing(data)) 
         stop("'data' argument is not specified")
     if (!is.emg(data)) 
@@ -13,9 +13,10 @@ highpass <- function(data, channel, cutoff = 50, n = 5, data.name) {
     
     if (data$samplingrate == 0) 
         stop("The sampling rate is requiered")
-    bf <- butter(n, 2 * cutoff/data$samplingrate, type = "high")
-    b <- signal::filter(bf, data$values)
+    bf <- butter(n, 2 * cutoff/data$samplingrate, type = "low")
+    b <- signal::filter(bf, c(data$values, rep(tail(data$values, 1), 2 * n + 1)))
     attributes(b) <- NULL
+    b <- tail(b, -(2 * n + 1))
     object <- emg(b, data$samplingrate, data$units, data$data.name)
     return(object)
 }

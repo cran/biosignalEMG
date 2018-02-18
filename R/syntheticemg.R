@@ -39,4 +39,4 @@ syntheticemg <- function(n.length.out = 10000, on.sd = 1, on.duration.mean = 350
         on.off = b)
     class(object) <- "emg"
     return(object)
-} 
+}

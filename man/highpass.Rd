@@ -7,7 +7,7 @@ Highpass filter an EMG signal
 Highpass filter an \acronym{EMG} signal to remove signal artifacts and baseline noise contamination.
 }
 \usage{
-highpass(data, channel, cutoff = 50, data.name)
+highpass(data, channel, cutoff = 50, n = 5, data.name)
 }
 \arguments{
   \item{data}{
@@ -18,6 +18,9 @@ in case of multi-channel data, \code{channel} is the specific channel to be cons
 }
   \item{cutoff}{
 cutoff frequency in Hertz for the highpass filter. See \sQuote{Details} for recommended values.
+}
+  \item{n}{
+filter order for the highpass filter.
 }
  \item{data.name}{
 a string specifying the name of the variable which will appears on the plots. If empty or not provided is taken from the object given as \code{data}.
@@ -40,11 +43,11 @@ Freriks B., Stegeman D.F. and Hermens H.J. (1999) European Recommendations Stand
 J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
 }
 \note{
-This procedure only uses a butterworth type filter. In order to apply a different type of filter, please see the documentation of the \sQuote{signal} package.
+This procedure only uses a butterworth type filter of order \code{n}. In order to apply a different type of filter, please see the documentation of the \sQuote{signal} package.
 }
 
 \seealso{
-\code{\link{dcbiasremoval}}, \code{\link{whitening}}
+\code{\link{dcbiasremoval}}, \code{\link{whitening}}, \code{\link{lowpass}}
 }
 \examples{
 # Load a data.frame with EMG data

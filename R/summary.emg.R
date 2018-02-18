@@ -1,5 +1,6 @@
 summary.emg <- function(object, ...) {
-    res <- list(data.name = object$data.name, samples = length(object$values), units = object$units)
+    res <- list(data.name = object$data.name, samples = length(object$values), 
+        units = object$units)
     
     if (is.vector(object$values)) {
         if (object$samplingrate != 0) 
@@ -14,4 +15,4 @@ summary.emg <- function(object, ...) {
     res$samplingrate = object$samplingrate
     class(res) <- "summary.emg"
     return(res)
-} 
+}

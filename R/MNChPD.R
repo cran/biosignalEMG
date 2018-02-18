@@ -25,4 +25,4 @@ MNChPD <- function(b, bE) {
         s <- 0
     }
     return(s)
-} 
+}

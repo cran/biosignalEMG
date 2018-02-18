@@ -4,10 +4,10 @@
 RMS or MA Envelope of an EMG
 }
 \description{
-Computes the RMS-envelope or the MA-envelope of an \acronym{EMG} signal.
+Computes the RMS-envelope, the MA-envelope ot the LE-envelope of an \acronym{EMG} signal.
 }
 \usage{
-envelope(data, channel, method = c("MA", "RMS"), wsize, data.name, ...)
+envelope(data, channel, method = c("MA","RMS","LE"), wsize, cutoff, n = 2, data.name, ...)
 }
 \arguments{
   \item{data}{
@@ -17,10 +17,16 @@ an \sQuote{emg} object.
 in case of multi-channel data, \code{channel} is the specific channel to be considered by the procedure.  Possible values: a character vector specifying the name of the channel to be considered (case sensitive) or a numeric value specifying the channel to be considered (number of column in \code{data}).
 }
   \item{method}{
-a string, "MA" (default) for MA-envelope  or "RMS" for the RMS-envelope.
+a string, "MA" (default) for MA-envelope, "RMS" for the RMS-envelope and "LE" for the LE-envelope.
 }
   \item{wsize}{
-determines the length of the moving window that is used to calculate the local averages of the data.
+determines the length of the moving window that is used to calculate the local averages of the data in RMS and MA envelopes.
+}
+  \item{cutoff}{
+cutoff frequency in Hertz for the lowpass filter used in LE-envelope.
+}
+  \item{n}{
+filter order for the lowpass filter used in LE-envelope.
 }
  \item{data.name}{
 a string specifying the name of the variable which will appears on the plots. If empty or not provided is taken from the object given as \code{data}.
@@ -35,6 +41,8 @@ The MA-envelope corresponds to the moving average of the rectified \acronym{EMG}
 The RMS-envelope corresponds to the moving average of
 \deqn{y_i=(x_i-\mu_{x})^2}{y_i=(x_i-mu)^2}
 where \eqn{x_i}{x_i} is each value of the \acronym{EMG} signal and \eqn{\mu_{x}}{mu} is the overall mean of the \acronym{EMG} signal.
+
+LE-envelope or linear envelope is lowpass filtered rectified signal.
 }
 \value{
 An \sQuote{emg} object containing the envelope of the \acronym{EMG}.
@@ -45,9 +53,6 @@ Electromyography. Version 1.0, Noraxon INC. USA.
 }
 \author{
 J.A. Guerrero \email{jaguerrero@correo.uaa.mx}
-}
-\note{
-A direct option to compute the linear envelope (LE-envelope) is not provided, but it can be indirectly computed as shown in the examples.
 }
 \seealso{
 \code{\link{emg}}, \code{\link{movingaverage}}
@@ -71,15 +76,11 @@ emgrms <- envelope(emgx, method = "RMS", wsize = 60)
 plot(emgx, main = "RMS-envelope")
 plot(emgrms, add = TRUE, lwd = 4, col = "red")
 
-\dontrun{
-# Computation of the LE-envelope
-library(signal)
+# RMS-envelope
+emgle <- envelope(emgx, method = "LE", cutoff = 10) #10Hz
+# Superimpose the envelope on the EMG
+plot(emgx, main = "LE-envelope")
+plot(emgle, add = TRUE, lwd = 4, col = "red")
 
-bf <- butter(2, 1/50, type = "low")
-b <- filter(bf, emgr$values)
-plot(emgx, main = "LE-envelope", timeunits = "samples")
-lines(b, lwd = 2, col = "red")
-# Note that there is a visible lag time on the envelope
-}
 }
 \keyword{ manip }

@@ -62,4 +62,4 @@ integration <- function(data, channel, reset = FALSE, reset.criteria = c("sample
     }
     object <- iemg(ivalues, call, resetpoints, data$samplingrate, units, data$data.name)
     return(object)
-} 
+}

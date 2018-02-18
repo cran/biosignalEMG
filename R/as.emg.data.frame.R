@@ -13,4 +13,4 @@ as.emg.data.frame <- function(x, ...) {
     }
     object <- emg(data, samplingrate = samplingrate, units = units, data.name = colnames(x))
     return(object)
-} 
+}

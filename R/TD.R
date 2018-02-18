@@ -22,14 +22,14 @@ TD <- function(b, bE, t) {
             if (d < t) 
                 sd <- c(sd, d)
         }
-    if(length(sd)>1){
-        s <- sqrt(sum(sd^2)/length(sd))
-    } else {
-       s <- NA
-       warning("Can't compute TD, tolerance value too low.")
-    }
+        if (length(sd) > 1) {
+            s <- sqrt(sum(sd^2)/length(sd))
+        } else {
+            s <- NA
+            warning("Can't compute TD, tolerance value too low.")
+        }
     } else {
         s <- 0
     }
     return(s)
-} 
+}

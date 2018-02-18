@@ -7,4 +7,4 @@ summary.iemg <- function(object, ...) {
     }
     class(res) <- "summary.iemg"
     return(res)
-} 
+}

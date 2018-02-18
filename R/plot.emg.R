@@ -81,7 +81,8 @@ plot.emg <- function(x, channels = "all", samples = 0, type = "l", timeunits = c
             if (object$units != "") 
                 ylab <- paste(ylab, "(", object$units, ")", sep = "")
             if (add) 
-                lines(x, object$values, type = type, ylab = ylab, ...) else plot(x, object$values, type = type, ylab = ylab, xlab = xlab, ...)
+                lines(x, object$values, type = type, ylab = ylab, ...) else plot(x, object$values, type = type, ylab = ylab, xlab = xlab, 
+                ...)
         } else {
             if (add) 
                 lines(x, object$values, type = type, ...) else plot(x, object$values, type = type, xlab = xlab, ...)
@@ -152,4 +153,4 @@ plot.emg <- function(x, channels = "all", samples = 0, type = "l", timeunits = c
         op$fig <- NULL
         par(op)
     }
-} 
+}

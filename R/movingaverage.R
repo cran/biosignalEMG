@@ -22,11 +22,15 @@ movingaverage <- function(data, channel, wsize, units = c("samples", "time"), da
     }
     if (wsize < 1) 
         stop("Window size is too small")
-    
-    filtercoeffs <- rep(1/(2 * wsize + 1), 2 * wsize + 1)
-    fvalues <- stats::filter(data$values, filtercoeffs, sides = 2)
-    # fvalues[is.na(fvalues)]<-data$values[is.na(fvalues)]
+    values <- data$values
+    n <- length(values)
+    fvalues <- numeric()
+    for (i in 1:n) {
+        w_start <- max(1, i - wsize)
+        w_end <- min(n, i + wsize)
+        fvalues[i] <- mean(values[w_start:w_end])
+    }
     object <- emg(fvalues[1:length(data$values)], data$samplingrate, data$units, 
         data$data.name)
     return(object)
-} 
+}

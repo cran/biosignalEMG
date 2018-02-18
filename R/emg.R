@@ -25,4 +25,4 @@ emg <- function(data, samplingrate = 0, units = "", data.name = "") {
     object <- list(values = data, units = units, samplingrate = samplingrate, data.name = data.name)
     class(object) <- "emg"
     return(object)
-} 
+}

@@ -8,8 +8,8 @@ iemg <- function(data, calliemg, resetpoints, samplingrate = 0, units = "", data
     if (!is.call(calliemg)) 
         stop("'iemg' is not intended to be called durectly, but indirectly from the 'integration' function")
     
-    object <- list(values = data, call = calliemg, reset.points = resetpoints, units = units, 
-        samplingrate = samplingrate, data.name = data.name)
+    object <- list(values = data, call = calliemg, reset.points = resetpoints, 
+        units = units, samplingrate = samplingrate, data.name = data.name)
     class(object) <- "iemg"
     return(object)
-} 
+}

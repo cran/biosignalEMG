@@ -9,4 +9,4 @@ as.emg.numeric <- function(x, ...) {
     attributes(data) <- NULL
     object <- emg(data, samplingrate = samplingrate, units = units, data.name = deparse(substitute(x)))
     return(object)
-} 
+}

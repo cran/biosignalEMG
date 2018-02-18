@@ -19,4 +19,4 @@ rectification <- function(data, channel, rtype = c("fullwave", "halfwave"), data
         rectdata[tdata < 0] <- 0
     object <- emg(rectdata, data$samplingrate, data$units, data$data.name)
     return(object)
-} 
+}

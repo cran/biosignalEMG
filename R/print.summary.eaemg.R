@@ -7,4 +7,4 @@ print.summary.eaemg <- function(x, ...) {
         cat("\n", round(object$level * 100, 2), "% empirical prediction intervals")
     }
     cat("\n", object$gp, "group points\n")
-} 
+}

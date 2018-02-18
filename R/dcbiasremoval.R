@@ -15,4 +15,4 @@ dcbiasremoval <- function(data, channel, baseline, data.name) {
     values <- data$values - baseline
     object <- emg(values, data$samplingrate, data$units, data$data.name)
     return(object)
-} 
+}

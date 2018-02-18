@@ -1,1 +1,1 @@
-as.emg <- function(x, ...) UseMethod("as.emg") 
+as.emg <- function(x, ...) UseMethod("as.emg")

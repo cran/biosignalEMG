@@ -44,7 +44,8 @@ eaemg <- function(data, channel, runs, what, timenormalization = c("min", "mean"
     alpha <- 1 - level
     if (empirical) {
         LI <- unlist(lapply(tnd, quantile, probs = alpha/2, names = FALSE, na.rm = TRUE))
-        LS <- unlist(lapply(tnd, quantile, probs = 1 - alpha/2, names = FALSE, na.rm = TRUE))
+        LS <- unlist(lapply(tnd, quantile, probs = 1 - alpha/2, names = FALSE, 
+            na.rm = TRUE))
     } else {
         S <- unlist(lapply(tnd, sd))
         S[is.na(S)] <- 0
@@ -56,4 +57,4 @@ eaemg <- function(data, channel, runs, what, timenormalization = c("min", "mean"
     object <- list(empirical = empirical, level = level, intervals = intervals)
     class(object) <- "eaemg"
     return(object)
-} 
+}

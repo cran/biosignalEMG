@@ -9,4 +9,4 @@ print.eaemg <- function(x, ...) {
     cat("\n", dim(object$intervals)[1], "group points\n")
     cat("\nPrediction intervals:\n")
     print(object$intervals)
-} 
+}

@@ -31,4 +31,4 @@ plot.iemg <- function(x, type = "l", timeunits = c("seconds", "samples"), reset.
     x[!(object$reset.points + 1)] <- NA
     x[object$reset.points] <- tx
     lines(head(x, length(object$values)), object$values, lty = reset.lty)
-} 
+}

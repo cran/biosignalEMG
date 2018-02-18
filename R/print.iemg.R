@@ -16,4 +16,4 @@ print.iemg <- function(x, ...) {
     }
     cat("\nValues:\n")
     print(object$values)
-} 
+}

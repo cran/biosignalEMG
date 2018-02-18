@@ -12,9 +12,9 @@ Data processing tools to compute the rectified, integrated and the averaged \acr
 \tabular{ll}{
 Package: \tab biosignalEMG\cr
 Type: \tab Package\cr
-Version: \tab 2.0.2\cr
-Date: \tab 2018-02-09\cr
-License: \tab GPL (>= 2)\cr
+Version: \tab 2.1.0\cr
+Date: \tab 2018-02-18\cr
+License: \tab GPL (>= 3)\cr
 }
 Standard processing tools (rectification, integration, average, ensemble-average, onset/offset detection) of raw data of an \acronym{EMG} signal.
 }

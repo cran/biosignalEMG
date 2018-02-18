@@ -28,4 +28,4 @@ loadABF1 <- function(filename, const = 0.00489615) {
     
     return(emg(data, samplingrate = frec, units = sunits[sseq[1:nch] + 1], data.name = snames[sseq[1:nch] + 
         1]))
-} 
+}

@@ -28,7 +28,7 @@ onoff_bonato <- function(data, channel, sigma_n, Pfa = 0.05, m = 5, r0 = 1, minL
     cs <- cumsum(z > zeta)
     pcs <- tail(cs, -(m - 1)) - c(0, head(cs, -m))
     detected <- c(pcs >= r0, rep(0, m))
-    #return(detected)
+    # return(detected)
     cad <- rle(detected)
     
     cadL <- cad$lengths[1]
@@ -66,4 +66,4 @@ onoff_bonato <- function(data, channel, sigma_n, Pfa = 0.05, m = 5, r0 = 1, minL
     class(cad2) <- "rle"
     detected <- inverse.rle(cad2)
     return(detected)
-} 
+}
